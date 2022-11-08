@@ -1,6 +1,5 @@
 [
     {
-      "_id": "636797ae87382bbf97b1a36d",
       "service_id": 0,
       "img": "https://etimg.etb2bimg.com/photo/75526812.cms",
       "price": 36,
@@ -25,7 +24,6 @@
       ]
     },
     {
-      "_id": "636797ae50b2fd5ac47aaa7e",
       "service_id": 1,
       "img": "https://media.smallbiztrends.com/2018/05/shutterstock_198792305.jpg",
       "price": 38,
@@ -50,7 +48,7 @@
       ]
     },
     {
-      "_id": "636797ae94953f3dd675796f",
+      
       "service_id": 2,
       "img": "https://www.aviationanalysis.net/wp-content/uploads/2022/09/lp-ban-auto-repair-business-plan.jpg",
       "price": 35,
@@ -75,7 +73,7 @@
       ]
     },
     {
-      "_id": "636797ae56d3ba3189ddf838",
+      
       "service_id": 3,
       "img": "https://static.vecteezy.com/system/resources/thumbnails/005/622/788/small/mechanic-technician-team-person-are-repairing-car-engine-motor-automobile-service-and-professional-checking-maintenance-in-garage-auto-vehicle-or-automotive-machine-occupation-free-video.jpg",
       "price": 32,
@@ -100,7 +98,7 @@
       ]
     },
     {
-      "_id": "636797ae11f95070f5843355",
+      
       "service_id": 4,
       "img": "https://generisonline.com/wp-content/uploads/2022/05/marketing-ideas-for-auto-repair.jpg",
       "price": 25,
