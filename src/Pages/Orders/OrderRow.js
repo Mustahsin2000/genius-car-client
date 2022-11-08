@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from 'react';
 
-const OrderRow = ({order}) => {
-    const {serviceName,price,email,customer,phone,service} = order;
+const OrderRow = ({order,handledelete,handleStatusUpdate}) => {
+    const {_id,serviceName,price,customer,phone,service,status} = order;
 
     const [orderService,setOrderservice] = useState({});
     useEffect(()=>{
 
         fetch(`http://localhost:5000/services/${service}`)
         .then(res=>res.json())
-        .then(data=>setOrderservice(data));
+        .then(data=>setOrderservice(data))
 
     },[service])
+
+    //ekhane handle delete chilo ta orders a niye jete hobe
+
+
     return (
               <tr>
         <th>
           <label>
-            <input type="checkbox" className="checkbox" />
+            <button onClick={()=>handledelete(_id)} className='btn btn-ghost font-bold bg-orange-600'>X</button>
           </label>
         </th>
         <td>
@@ -41,7 +45,7 @@ const OrderRow = ({order}) => {
         </td>
         <td>Purple</td>
         <th>
-          <button className="btn btn-ghost btn-xs">details</button>
+          <button onClick={()=>handleStatusUpdate(_id)} className="btn btn-ghost btn-xs">{status? status: 'pending'}</button>
         </th>
       </tr>
         
