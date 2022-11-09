@@ -16,15 +16,15 @@ const Orders = () => {
         })
         .then(res=>{
           if(res.status === 401 || res.status === 403){
-               logOut();
+               return logOut();
           }
-          return res.json()
+          return res.json();
         })
         .then(data=>{
           // console.log('received',data);
           setOrders(data)
         })
-    },[user?.email])
+    },[user?.email,logOut])
 
 
     const handledelete = id =>{
