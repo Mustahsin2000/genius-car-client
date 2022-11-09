@@ -43,7 +43,7 @@ const Checkout = () => {
             }
         }
         )
-        .then(re=>console.error(re))
+        .then(err=>console.error(err))
     }
     return (
         <div className='py-3'>
@@ -57,7 +57,7 @@ const Checkout = () => {
             <input name='email' type="text" placeholder="Your Mail" defaultValue={user?.email} className="input input-bordered w-full" readOnly  required/>
           </div>
           <textarea name='message' className="textarea h-24 w-full textarea-bordered" placeholder="Your Massege"></textarea>
-          <Link to='/orders'><input className='btn mt-3 bg-orange-700' type="submit" value="Place Your Order" required/></Link>
+          <Link to='/orders'><input className='btn mt-3 bg-orange-700' type="submit" value="Place Your Order" /></Link>
             </form>
         </div>
     );
