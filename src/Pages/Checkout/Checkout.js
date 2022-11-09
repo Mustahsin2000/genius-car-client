@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { json, Link, useLoaderData } from 'react-router-dom';
+import {  Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Checkout = () => {
@@ -21,7 +21,7 @@ const Checkout = () => {
             customer:name,
             email,
             phone,
-            message,
+            message
         
         }
         // if(phone.length > 10){
@@ -30,7 +30,8 @@ const Checkout = () => {
         fetch('http://localhost:5000/orders',{
             method:'POST',
             headers:{
-                'content-type' : 'application/json'
+                'content-type' : 'application/json',
+                authorization : `Bearer ${localStorage.getItem('genius-token')}`
             },
             body: JSON.stringify(order)
         })
@@ -57,7 +58,7 @@ const Checkout = () => {
             <input name='email' type="text" placeholder="Your Mail" defaultValue={user?.email} className="input input-bordered w-full" readOnly  required/>
           </div>
           <textarea name='message' className="textarea h-24 w-full textarea-bordered" placeholder="Your Massege"></textarea>
-          <Link to='/orders'><input className='btn mt-3 bg-orange-700' type="submit" value="Place Your Order" /></Link>
+          <input className='btn mt-3 bg-orange-700' type="submit" value="Place Your Order" />
             </form>
         </div>
     );
