@@ -27,7 +27,7 @@ const Checkout = () => {
         // if(phone.length > 10){
         //     alert('phoner number should or longer')
         // }
-        fetch('http://localhost:5000/orders',{
+        fetch('https://genius-car-server-self-ten.vercel.app/orders',{
             method:'POST',
             headers:{
                 'content-type' : 'application/json',
